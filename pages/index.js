@@ -36,6 +36,7 @@ if (!data) return
         <h1 className={styles.grid}>{data.title.rendered}</h1>
  <picture className="picture">
 <Image 
+alt="eva"
 src="/eva.jpg" 
 width={500} 
 height={500}

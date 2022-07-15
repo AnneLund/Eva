@@ -3,6 +3,7 @@ import Stripe from "stripe";
 import CartContext from "./context/CartContext";
 import {getPriceTotal, getProductDescription, getProductImage, getProductName} from "../utils/computed";
 import styles from '../styles/shop.module.scss'
+import Image from 'next/image'
 
 type CardProps = {
     price: Stripe.Price
@@ -21,7 +22,9 @@ const ProductCard: FunctionComponent<CardProps> = ({price}) => {
         <div>
             <div className={styles.card}>
                
-                    <img
+                    <Image 
+                        width={100} 
+                        height={100}
                         src={getProductImage(price.product)}
                         alt={getProductDescription(price.product)}
                     />

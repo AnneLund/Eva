@@ -5,6 +5,7 @@ import { SearchIcon, ShoppingBagIcon } from '@heroicons/react/outline'
 import { Popover, Transition } from '@headlessui/react'
 import CartContext from "./context/CartContext";
 import {Stripe} from "stripe";
+import Image from 'next/image'
 import {getPriceTotal, getProductDescription, getProductImage, getProductName} from "../utils/computed";
 
 const Header: FunctionComponent = () => {
@@ -72,10 +73,9 @@ const Header: FunctionComponent = () => {
                                                 {items?.map((price) => (
                                                     <li key={price.id} className={styles.li} >
                                                         
-                                                            <img
+                                                            <Image width={100} height={100}
                                                                 src={getProductImage(price.product)}
                                                                 alt={getProductDescription(price.product)}
-                                                                className="w-full h-full object-center object-cover"
                                                             />
                                                        
 

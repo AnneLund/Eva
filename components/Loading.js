@@ -5,7 +5,9 @@ const Loading = () => {
     return(
         <section className={styles.main}>
             <div className='leaf4_loading'>
-            <Image src="/leaf4.png" width={100} height={100}/>
+            <Image 
+             alt="leaf"
+            src="/leaf4.png" width={100} height={100}/>
             </div>
         </section>
     )
