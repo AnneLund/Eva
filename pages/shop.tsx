@@ -5,6 +5,7 @@ import ProductCard from "../components/ProductCard";
 import CartContext from "../components/context/CartContext";
 import Header from "../components/Header";
 import styles from '../styles/shop.module.scss'
+import styles1 from '../styles/Home.module.scss'
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     const stripe = new Stripe(process.env.STRIPE_SECRET ?? '', {

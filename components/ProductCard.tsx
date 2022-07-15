@@ -23,7 +23,7 @@ const ProductCard: FunctionComponent<CardProps> = ({price}) => {
             <div className={styles.card}>
                
                     <Image 
-                        width={100} 
+                        width={80} 
                         height={100}
                         src={getProductImage(price.product)}
                         alt={getProductDescription(price.product)}
